@@ -1,29 +1,20 @@
-#!/bin/bash
+#!/bin/zsh
 
-NVIM = $HOME/.config/nvim
-
-function mkdirs() {
-  if [ ! -d $1 ]; then
-    mkdir -p $1
-    echo $1 "directory created"
-  fi
-}
+NVIM=$HOME/.config/nvim
+TARGET=$HOME/Documents/Igloo/dotfiles
 
 function relink() {
-  if [ -f $1 ]; then
-    rm $1
-    echo $1 "was deleted"
-  else echo $1 "doesn't exist"
+  if [[ -f $2 ]]; then
+    rm $2
+  else echo $2 "doesn't exist!"
   fi
 
-  ln -s $2 $1
-  echo "Linked $2 to $1"
+  ln -s $1 $2
+  echo "✓ Linked $2 to $1."
 }
 
-mdkirs $NVIM
+relink $NVIM/init.lua $TARGET/nvim/init.lua
+relink $NVIM/plugins.lua $TARGET/nvim/plugins.lua
+relink $NVIM/set.lua $TARGET/nvim/set.lua
 
-relink $NVIM/init.lua $HOME/Documents/Igloo/dotfiles/nvim/init.lua
-relink $NVIM/plugins.lua $HOME/Documents/Igloo/dotfiles/nvim/plugins.lua
-relink $NVIM/set.lua $HOME/Documents/Igloo/dotfiles/nvim/set.lua
-
-echo "symlink update complete"
+echo "✓ Symlink complete."
