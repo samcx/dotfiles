@@ -1,14 +1,8 @@
 #!/bin/zsh
 
 NVIM=$HOME/.config/nvim
-TARGET=$HOME/Documents/Igloo/dotfiles
+DOT=$HOME/Documents/Igloo/dotfiles
 
-function relink() {
-  cp $1 $2
-}
-
-relink $NVIM/init.lua $TARGET/nvim/init.lua
-relink $NVIM/plugins.lua $TARGET/nvim/plugins.lua
-relink $NVIM/set.lua $TARGET/nvim/set.lua
+cp -r $NVIM $DOT/nvim
 
 echo "✓ Completed syncing dotfiles."
