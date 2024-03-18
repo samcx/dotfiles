@@ -3,6 +3,6 @@
 NVIM=$HOME/.config/nvim
 DOT=$HOME/Documents/Igloo/dotfiles
 
-cp -r $NVIM $DOT/nvim
+cp -r $NVIM $DOT
 
 echo "✓ Completed syncing dotfiles."
