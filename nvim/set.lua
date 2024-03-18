@@ -1,1 +1,0 @@
-/Users/samcx/.config/nvim/set.lua
