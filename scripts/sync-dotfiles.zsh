@@ -11,4 +11,4 @@ relink $NVIM/init.lua $TARGET/nvim/init.lua
 relink $NVIM/plugins.lua $TARGET/nvim/plugins.lua
 relink $NVIM/set.lua $TARGET/nvim/set.lua
 
-echo "✓ Symlink complete."
+echo "✓ Completed syncing dotfiles."
