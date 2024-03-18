@@ -1,5 +1,7 @@
-local fn, loop, opt = vim.fn, vim.loop, vim.opt
+local fn, g, loop, opt = vim.fn, vim.g, vim.loop, vim.opt
 local lazypath = fn.stdpath("data") .. "/lazy/lazy.nvim"
+
+g.mapleader = " "
 
 if not loop.fs_stat(lazypath) then
   fn.system({
