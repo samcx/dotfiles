@@ -9,7 +9,7 @@ return {
     config = function()
       local builtin = require("telescope.builtin")
 
-      keymap.set("n", "<C-p>", builtin.find_files, { desc = "[S]earch [F]iles" })
+      keymap.set("n", "<C-p>", builtin.find_files, { desc = "Search Files" })
       keymap.set("n", "<leader>sg", builtin.live_grep, { desc = "[S]earch by [G]rep" })
     end,
   }
