@@ -1,3 +1,5 @@
+local keymap = vim.keymap
+
 return {
   "nvim-neo-tree/neo-tree.nvim",
   branch = "v3.x",
@@ -21,9 +23,12 @@ return {
       },
     })
 
-    vim.keymap.set({ "n" }, "<C-r>", ":Neotree toggle<CR>", {
+    keymap.set({ "n" }, "<C-r>", ":Neotree toggle<CR>", {
       desc = "Toggle Neotree",
       silent = true,
     })
+    keymap.set({ "n" }, "<C-[>", ":bprevious<CR>", { desc = "Navigate to previous buffer" })
+    keymap.set({ "n" }, "<C-]>", ":bnext<CR>", { desc = "Navigate to next buffer" })
+    keymap.set({ "n" }, "<C-w>", ":bd<CR>", { desc = "Close current buffer" })
   end,
 }
