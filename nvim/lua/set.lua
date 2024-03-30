@@ -1,5 +1,8 @@
 local cmd, opt = vim.cmd, vim.opt
 
+-- HUD & Status Info —————————————————————————————————————————————
+opt.number = true
+
 -- Tabs ——————————————————————————————————————————————————————————
 opt.expandtab = true
 opt.shiftwidth = 2
