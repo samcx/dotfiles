@@ -16,4 +16,5 @@ end
 opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins")
+require("remap")
 require("set")
