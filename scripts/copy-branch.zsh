@@ -5,8 +5,10 @@
 if [[ $# -ne 1 ]]; then
   echo "Missing correct number of arguments (1)."
   exit 1
-elif [[ $1 =~ [^1-9]+$ ]]; then
-  echo "Argument is not a integer between 1 and 9."
+fi
+
+if [[ $1 -lt 1 || $1 -gt 100 ]]; then
+  echo "Argument is not a integer between 1 and 100."
   exit 1
 fi
 
@@ -22,7 +24,7 @@ for i in {1..$#branches}; do
   fi
 done
 
-if [[ $1 > $#branches ]]; then
+if [[ $1 -gt $#branches ]]; then
   echo "Argument is greater than the number of branches listed in your repository."
   exit 1
 fi
