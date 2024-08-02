@@ -41,7 +41,7 @@ if [[ $1 == "-all" ]]; then
   exit 0
 fi
 
-if [[ $1 =~ ^[1-9]+$ ]]; then
+if [[ $1 =~ ^[1-9][0-9]*$ ]]; then
   grab_line() {
     git branch | sed -n "${1}p"
   }
