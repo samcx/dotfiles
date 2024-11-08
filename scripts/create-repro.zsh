@@ -4,4 +4,4 @@
 
 read "NAME?What do you want to name the repro directory? "
 
-pnpm create next-app@latest $NAME --ts --eslint --no-tailwind --no-src-dir --use-pnpm -e reproduction-template && cd $NAME && open . -a "Zed"
+pnpm create next-app@canary $NAME --app --empty --eslint --import-alias='@/*' --no-tailwind --no-src-dir --ts --turbopack --use-pnpm && cd $NAME && open . -a "Cursor"
