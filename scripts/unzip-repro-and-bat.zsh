@@ -4,6 +4,7 @@
 
 if [[ $# != 1 ]]; then
   echo "Error: This script requires exactly one argument."
+  exit 1
 fi
 
 read "NAME?What do you want to name the repro directory? "
