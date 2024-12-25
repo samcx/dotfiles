@@ -1,0 +1,28 @@
+[
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-ctrl-left": "pane::SwapItemLeft",
+      "cmd-ctrl-right": "pane::SwapItemRight",
+      "ctrl-z": "editor::ToggleSoftWrap"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "n": "search::SelectNextMatch",
+      "N": "search::SelectPrevMatch",
+      "shift-j": "editor::MoveLineDown",
+      "shift-k": "editor::MoveLineUp",
+      "shift-v": "editor::SelectLine"
+    }
+  },
+  {
+    "context": "Editor && !menu && vim_mode == normal && VimControl && !VimWaiting",
+    "bindings": {
+      "g r": "editor::FindAllReferences",
+      "space c l": "editor::CopyPermalinkToLine",
+      "space c r": "editor::CopyRelativePath"
+    }
+  }
+]

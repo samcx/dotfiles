@@ -1,0 +1,52 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "assistant": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-5-sonnet-latest"
+    },
+    "provider": "anthrophic",
+    "version": "2"
+  },
+  "auto_update": true,
+  "buffer_font_family": "Geist Mono",
+  "buffer_font_size": 16,
+  "collaboration_panel": {
+    "button": false
+  },
+  "chat_panel": {
+    "button": false
+  },
+  "cursor_blink": false,
+  "format_on_save": "off",
+  "inline_completions": {
+    "disabled_globs": [".env"]
+  },
+  "notification_panel": {
+    "button": false
+  },
+  "project_panel": {
+    "dock": "right",
+    "auto_fold_dirs": false
+  },
+  "show_completions_on_input": true,
+  "show_inline_completions": true,
+  "tab_size": 2,
+  "terminal": {
+    "button": false
+  },
+  "theme": "Vercel",
+  "ui_font_family": "Geist Mono",
+  "ui_font_size": 16,
+  "vim": {
+    "use_system_clipboard": "always"
+  },
+  "vim_mode": true
+}
