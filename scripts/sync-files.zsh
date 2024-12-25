@@ -5,4 +5,4 @@ DOT=$HOME/Documents/Igloo/dotfiles
 
 cp -r $NVIM $DOT
 
-echo "✓ Completed syncing dotfiles."
+echo "✓ Completed syncing files."
