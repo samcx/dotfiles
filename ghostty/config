@@ -1,0 +1,17 @@
+cursor-style = block
+cursor-style-blink = false
+font-family = Geist Mono
+font-size = 14
+font-style = Regular
+macos-icon = custom-style
+macos-icon-ghost-color = 8f8f8f
+macos-icon-screen-color = 101010
+macos-titlebar-proxy-icon = hidden
+macos-titlebar-style = native
+shell-integration-features = no-cursor
+title = @samcx
+theme = Vercel
+window-colorspace = display-p3
+window-theme = light
+
+keybind = cmd+backspace=esc:w
