@@ -8,12 +8,13 @@ if [[ $# != 1 ]]; then
 fi
 
 read "NAME?What do you want to name the repro directory? "
+read "AREA?Which area of Next.js? "
 
 if [[ $1 == *github* ]]; then
   pattern="https://github.com/"
   result=${1#$pattern}
-  cd ~/Documents/Vercel\ Next.js && gh repo clone $result $NAME && cd $NAME && rm -rf package-lock.json yarn.lock && bat --paging=never package.json
+  cd ~/Documents/Vercel\ Next.js/$AREA && gh repo clone $result $NAME && cd $NAME && rm -rf package-lock.json yarn.lock && bat --paging=never package.json
 else
-  cd ~/Downloads && unzip -q -d $NAME $1 && mv $NAME ~/Documents/Vercel\ Next.js && cd ~/Documents/Vercel\ Next.js/$NAME && rm -rf package-lock.json yarn.lock && bat --paging=never package.json
+  cd ~/Downloads && unzip -q -d $NAME $1 && mv $NAME ~/Documents/Vercel\ Next.js/$AREA && cd ~/Documents/Vercel\ Next.js/$AREA/$NAME && rm -rf package-lock.json yarn.lock && bat --paging=never package.json
   echo "Successfully unzipped $1 to $NAME!"
 fi
