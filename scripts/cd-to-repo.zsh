@@ -13,6 +13,8 @@ elif [[ $1 = "next" ]]; then
   cd ~/Documents/Vercel/next.js
 elif [[ $1 = "samcx" ]]; then
   cd ~/Documents/Igloo/samcx
+elif [[ $1 = "vercel-nextjs" ]]; then
+  cd ~/Documents/Vercel/vercel-nextjs
 elif [[ $1 = "v0" ]]; then
   cd ~/Documents/Vercel/v0
 else
